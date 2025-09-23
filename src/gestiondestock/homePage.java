@@ -45,7 +45,6 @@ public class homePage extends javax.swing.JFrame {
         menuProduits = new javax.swing.JMenu();
         menuRapport = new javax.swing.JMenuItem();
         menuProduit = new javax.swing.JMenuItem();
-        menuGerer = new javax.swing.JMenuItem();
         menuVendre = new javax.swing.JMenuItem();
         menuRappVentes = new javax.swing.JMenuItem();
 
@@ -83,15 +82,6 @@ public class homePage extends javax.swing.JFrame {
             }
         });
         menuProduits.add(menuProduit);
-
-        menuGerer.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        menuGerer.setText("Gérer");
-        menuGerer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuGererActionPerformed(evt);
-            }
-        });
-        menuProduits.add(menuGerer);
 
         menuVendre.setText("Vendre");
         menuVendre.addActionListener(new java.awt.event.ActionListener() {
@@ -153,19 +143,6 @@ public class homePage extends javax.swing.JFrame {
             System.getLogger(homePage.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         }
     }//GEN-LAST:event_menuRapportActionPerformed
-
-    private void menuGererActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuGererActionPerformed
-        try {
-            // TODO add your handling code here:
-            gererExistant g = new gererExistant();
-            mainPannel.removeAll();
-            mainPannel.add(g);
-            mainPannel.revalidate();
-            mainPannel.repaint();
-        } catch (FileNotFoundException ex) {
-            System.getLogger(homePage.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
-        }
-    }//GEN-LAST:event_menuGererActionPerformed
 
     private void menuVendreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuVendreActionPerformed
         try {
@@ -251,7 +228,6 @@ public class homePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel mainPannel;
-    private javax.swing.JMenuItem menuGerer;
     private javax.swing.JMenuItem menuProduit;
     private javax.swing.JMenu menuProduits;
     private javax.swing.JMenuItem menuRappVentes;
